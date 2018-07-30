@@ -33,7 +33,6 @@
 #deck, #waste{
 
     padding: 1%;
-  
     height: auto;
 
 }
@@ -107,4 +106,125 @@
     padding: 1% 2% 1% 1%;
 }
 
+/*for responsive*/
+@media only screen and (max-width: 440px) {
 
+    #stowas div{
+        margin-top: 18%;
+    }
+    #deck img, #waste img{
+        width: 60px;
+        height: 80px;   
+    }
+    #deck, #waste{
+        height: 80px;
+    }
+    #waste img{
+        margin-right: -60%;
+    }
+    #waste{
+        width: 24%;
+    }
+
+    #foundation img{
+        width: 60px;
+        height: 80px;
+    }
+    #foundation{
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+
+    #maneuver{
+        height: 280px + 5%;
+    }
+
+    .card{
+        width: 25px;
+        height: 60px;
+        margin-bottom: -45px;
+    }
+    .column{
+        width:25px;
+
+    }
+
+}
+@media only screen and (max-width: 1300px) and (min-width: 450px) {
+    #stowas div{
+        margin-top: 10%;
+    }
+    #deck img, #waste img{
+        width: 40px;
+        height: 60px;   
+    }
+    #deck, #waste{
+        height: 60px;
+    }
+    #waste img{
+        margin-right: -20%;
+    }
+    #waste{
+        width: 15%;
+    }
+    #foundation img{  
+        width: 40px;
+        height: 60px;
+    }
+    #foundation{
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+    #maneuver{
+        height: 180px;
+    }
+    .card{
+        width: 40px;
+        height: 60px;
+        margin-bottom: -50px;
+    }
+    .column{
+        width:40px;
+        margin-left: 2%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #stowas div{
+        margin-top: 20%;
+    }
+    #deck img, #waste img{
+        width: 40px;
+        height: 60px;   
+    }
+    #deck, #waste{
+        height: 60px;
+    }
+    #waste img{
+        margin-right: -40%;
+    }
+    #waste{
+        width: 23%;
+    }
+    #foundation img{
+        width: 60px;
+        height: 80px;
+    }
+    #foundation{
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+    #maneuver{
+        height: 280px;
+        margin-top: 2%;
+    }
+
+    .card{
+        width: 25px;
+        height: 60px;
+        margin-bottom: -45px;
+    }
+    .column{
+        width:25px;
+
+    }
+}
