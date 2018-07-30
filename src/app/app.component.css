@@ -14,6 +14,12 @@
     margin-top: -35px;
     margin-left: 70%;
 }
+
+#scoreboard{
+    position: fixed;
+    margin-top: -35px;
+    margin-left: 20%;
+}
 .menubutton{
 
     border-radius: 50px;

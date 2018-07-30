@@ -5,6 +5,7 @@ import { Card } from './card';
 import { wastepile } from './deck';
 import { Cards } from './deck';
 import { MessageService } from './message.service';
+import { AppComponent } from './app.component';
 
 
 @Injectable({
@@ -18,7 +19,8 @@ export class Manserv {
   total:number = 0;
   message: string = "Your last move was invalid";
   fromwaste: number = 0;
-  
+  score:number = 0;
+  scoreboard:string;
 
 
   constructor(private messageService: MessageService) { }
@@ -124,7 +126,7 @@ export class Manserv {
     }
     this.fromwaste = 0;
     this.clear();
-    this.moveall();
+    
     this.winGame(); 
   }
 
@@ -135,11 +137,14 @@ export class Manserv {
     if(this.win == this.total){
         this.total = 0;
         this.congratulate();
+        document.getElementById("scoreboard").innerHTML = this.scoreboard;
     }   
   }
 
   congratulate(): void {
     document.getElementById("modal").style.display = "block";
+    this.score +=1; 
+    this.scoreboard = "You won " + this.score + " times.";
   }
   
   /* function to force win conditions: to use call at the

@@ -12,7 +12,7 @@ import { Manserv } from './maneuver.service';
 })
 export class AppComponent {
   title = 'Solitaire';
-  
+
   constructor(private deckservice: DeckService, private manserv: Manserv){}
 
   clearTable(): void{
