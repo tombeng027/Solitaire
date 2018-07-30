@@ -1,0 +1,83 @@
+/*Menu bar*/
+#menu{
+    z-index: 1;
+    position: fixed;
+    background-color: darkgray;
+    border: 2px outset black;
+    box-shadow: 5px 5px black;
+    width: 98%;
+}  
+
+#message{
+    position:fixed;
+    float:right;
+    margin-top: -35px;
+    margin-left: 70%;
+}
+.menubutton{
+
+    border-radius: 50px;
+    border: 3px solid green;
+    position: fixed;
+    float: left;
+    background-color: rgb(18, 207, 81);
+    padding: 1px;
+    margin-top: -40px;
+    margin-left: 5%;
+    width: auto;
+    height: auto;
+
+}
+
+.menubutton:hover{
+    text-shadow: .5px .5px black;
+    box-shadow: 1px 1px black;
+}
+
+.menubutton:active{
+    box-shadow: 0 1px 0 1px grey;
+}
+
+.welcome{
+    margin-top: 3%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+/* Modal for congratulating winner*/
+
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.modal-content{
+    border-radius: 25px 25px;
+    margin: 10% auto;
+    background-color: white;
+    width: 80%;
+    padding: 5%;
+    box-shadow: 10px 10px black;
+}
+
+.modal-content div{
+    text-align: center;
+}
+
+.awesome{
+    font-size: 72px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px gray;
+}
+
+.modal-content img{
+    margin-left: 37%;
+}

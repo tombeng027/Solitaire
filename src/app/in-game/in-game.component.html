@@ -1,0 +1,46 @@
+<!--Deck and talon div-->
+<div id='stowas'>
+    <div id='deck' (click)="deckservice.drawCard()">
+      <img src="{{getImgSrc(deck,0)}}">
+    </div>
+    <div id='waste'>
+      <img src="{{getImgSrc(waste)}}" >  
+      <img src="{{getImgSrc(waste,1)}}" >
+      <img src="{{getImgSrc(waste,0)}}" (drag)="manserv.getRun(0,card,1)">
+    </div>
+</div>
+
+<!--foundation div-->
+<div id='foundation'>
+    <img src="{{getFoundSrc(0)}}" (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToFoundation($event,0)">
+    <img src="{{getFoundSrc(1)}}" (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToFoundation($event,1)">
+    <img src="{{getFoundSrc(2)}}" (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToFoundation($event,2)">
+    <img src="{{getFoundSrc(3)}}" (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToFoundation($event,3)">
+  </div>
+
+<!--Maneuver div-->
+<div id='maneuver'>
+    <div class='row'>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,0)" >
+            <img class="card" *ngFor="let card of pile1" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(0,card)">
+        </div>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,1)" >
+            <img class="card" *ngFor="let card of pile2" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(1,card)">
+        </div>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,2)" >
+            <img class="card" *ngFor="let card of pile3" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(2,card)">
+        </div>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,3)" >
+            <img class="card" *ngFor="let card of pile4" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(3,card)">
+        </div>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,4)" >
+            <img class="card" *ngFor="let card of pile5" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(4,card)">
+        </div>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,5)" >
+            <img class="card" *ngFor="let card of pile6" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(5,card)">
+        </div>
+        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,6)" >
+            <img class="card" *ngFor="let card of pile7" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(6,card)">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+/*foundation div*/
+#foundation{
+
+    background-color: aqua;
+    box-shadow: 5px 5px black;
+    float: left; 
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 17%;
+    height: auto;
+    width: auto;    
+
+}
+
+#foundation img{
+
+    float: left;
+    width: 80px;
+    height: 100px;
+
+}
+
+/*stock and waste div*/
+
+#stowas div{
+
+    margin-top: 5%;
+    float: left;
+    padding: 2%;
+
+}
+
+#deck, #waste{
+
+    padding: 1%;
+  
+    height: auto;
+
+}
+
+#deck{
+
+    width: auto;
+    margin-left: 10%;
+    margin-right: 5%;
+    background-color: firebrick;
+    box-shadow: 5px 5px black;
+
+}
+
+#waste{
+    width: 14%;
+    background-color: lightcoral;
+    box-shadow: 5px 5px black;
+}
+
+#deck img, #waste img{
+
+    width: 80px;
+    height: 100px;
+
+}
+
+#waste img{
+
+    float: left;
+    margin-right: -20%;
+
+}
+
+/*maneuver div div*/
+#maneuver{
+
+    background-color: darkseagreen;
+    box-shadow: 5px 5px black;
+    display: inline-block;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 10%;
+    width: 80%;
+    height: 360px;
+
+}
+
+.card{
+
+    display:block;
+    position: relative;
+    margin-bottom: -80px;
+    margin-left: 10%;
+    width: 80px;
+    height: 100px;
+
+}
+
+.row{
+    margin-top: 1%;
+    margin-left:3%;
+}
+
+.column{
+    border: 1px solid black;
+    align-content: center;
+    float: left;
+    margin-left:1%;
+    width: 100px;
+    height: 260px;
+    padding: 1% 2% 1% 1%;
+}
+
+#message{
+    text-align: left;
+}
