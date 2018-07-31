@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { foundation } from './foundation';
-import { maneuver, run, pile1, pile4, pile3, pile2, pile5, pile6, pile7 } from './maneuver';
+import { maneuver, run} from './maneuver';
 import { Card } from './card';
 import { wastepile } from './deck';
 import { Cards } from './deck';
@@ -31,6 +31,7 @@ export class Manserv {
 
   moveToPile(ev,to:number): void {
     ev.preventDefault();
+    console.log(to);
     if(this.fromwaste == 0){
      if((maneuver[to].length == 0 && this.card.rank == 13)||
      (this.card.rank == this.getRank(maneuver,to) - 1 && 
@@ -68,7 +69,6 @@ export class Manserv {
     if(int == 1){
       this.fromwaste = 1
       this.card = wastepile[wastepile.length -1];
-      this.index = wastepile.indexOf(card);
     }else{
       if(!card.facedown){
         this.from = from;
@@ -76,7 +76,6 @@ export class Manserv {
         this.index = maneuver[from].indexOf(card);
       }
     }
-    console.log(this.card)
   }
 
   clear(): void{
@@ -126,7 +125,6 @@ export class Manserv {
     }
     this.fromwaste = 0;
     this.clear();
-    
     this.winGame(); 
   }
 

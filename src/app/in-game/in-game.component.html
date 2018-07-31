@@ -21,26 +21,8 @@
 <!--Maneuver div-->
 <div id='maneuver'>
     <div class='row'>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,0)" >
-            <img class="card" *ngFor="let card of pile1" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(0,card)">
-        </div>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,1)" >
-            <img class="card" *ngFor="let card of pile2" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(1,card)">
-        </div>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,2)" >
-            <img class="card" *ngFor="let card of pile3" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(2,card)">
-        </div>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,3)" >
-            <img class="card" *ngFor="let card of pile4" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(3,card)">
-        </div>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,4)" >
-            <img class="card" *ngFor="let card of pile5" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(4,card)">
-        </div>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,5)" >
-            <img class="card" *ngFor="let card of pile6" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(5,card)">
-        </div>
-        <div class= 'column'  (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,6)" >
-            <img class="card" *ngFor="let card of pile7" src="{{card.getImgSrc()}}"   (drag)="manserv.getRun(6,card)">
+        <div class= 'column' *ngFor="let pile of maneuver; let i = index" (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,i)" >
+            <img class="card" *ngFor="let card of pile" src="{{card.getImgSrc()}}"  (drag)="manserv.getRun(i,card)">
         </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card';
 import { DeckService } from '../deck.service';
-import { pile1, pile2, pile3, pile4, pile5, pile6, pile7, maneuver } from '../maneuver';
+import { maneuver } from '../maneuver';
 import { Manserv } from '../maneuver.service';
 import { wastepile } from '../deck';
 import { Cards } from '../deck';
@@ -18,14 +18,6 @@ export class InGameComponent implements OnInit {
   topofdeck: String;
   empty = "../assets/empty.png";
   back = "../assets/back.png";
-
-  pile1 = pile1;
-  pile2 = pile2;
-  pile3 = pile3;
-  pile4 = pile4;
-  pile5 = pile5;
-  pile6 = pile6;
-  pile7 = pile7;
   
   maneuver = maneuver;
   
