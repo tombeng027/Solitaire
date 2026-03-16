@@ -15,7 +15,7 @@ export class Card {
       else{
         this.color = 'Black';
       }
-      this.imgsrc = "../assets/" + num + char + ".png";
+      this.imgsrc = "assets/" + num + char + ".png";
     }
 
     setFaceDown(){
@@ -28,9 +28,9 @@ export class Card {
 
     getImgSrc(): string{
       if(this.facedown){
-        return "../assets/back.png";
+        return "assets/back.png";
       }else{
-        return "../assets/" + this.rank + this.suit + ".png";
+        return "assets/" + this.rank + this.suit + ".png";
       } 
     }
 

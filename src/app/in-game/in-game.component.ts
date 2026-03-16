@@ -16,8 +16,8 @@ export class InGameComponent implements OnInit {
   deck = Cards;
   last: number;
   topofdeck: String;
-  empty = "../assets/empty.png";
-  back = "../assets/back.png";
+  empty = "assets/empty.png";
+  back = "assets/back.png";
   
   maneuver = maneuver;
   
