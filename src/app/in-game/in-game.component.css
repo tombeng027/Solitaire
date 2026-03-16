@@ -1,5 +1,5 @@
 :host {
-    --card-w: clamp(36px, 4.5vw, 62px);
+    --card-w: clamp(30px, 3.9vw, 52px);
     --card-h: calc(var(--card-w) * 1.25);
 }
 
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 14px;
-    margin-top: calc(var(--menu-h) + 8px);
+    margin-top: calc(var(--menu-h) + 4px);
 }
 
 #deck,
@@ -28,7 +28,7 @@
 
 #deck,
 #waste {
-    padding: 10px;
+    padding: 6px;
 }
 
 #deck {
@@ -56,42 +56,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     flex-wrap: wrap;
-    padding: 10px;
-    margin-top: 12px;
+    padding: 6px;
+    margin-top: 6px;
     background-color: aqua;
 }
 
 #maneuver {
-    margin-top: 12px;
-    padding: 12px;
+    margin-top: 6px;
+    padding: 8px;
     background-color: darkseagreen;
     overflow-x: auto;
-    height: calc(100vh - var(--menu-h) - (var(--card-h) * 2.35) - 70px);
-    min-height: 180px;
+    height: calc(100vh - var(--menu-h) - (var(--card-h) * 2.15) - 40px);
+    min-height: 150px;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(7, minmax(var(--card-w), 1fr));
-    gap: 10px;
-    min-width: calc(var(--card-w) * 7 + 60px);
+    gap: 6px;
+    min-width: calc(var(--card-w) * 7 + 38px);
 }
 
 .column {
-    min-height: calc(var(--card-h) * 2.8);
+    min-height: calc(var(--card-h) * 2.45);
 }
 
 .card {
     display: block;
     position: relative;
-    margin-bottom: calc(var(--card-h) * -0.5);
+    margin-bottom: calc(var(--card-h) * -0.45);
 }
 
 @media only screen and (max-width: 700px) {
     :host {
-        --card-w: clamp(30px, 8.5vw, 46px);
+        --card-w: clamp(24px, 7.2vw, 38px);
     }
 
     #stowas {
@@ -110,7 +110,7 @@
     }
 
     #maneuver {
-        height: calc(100vh - var(--menu-h) - (var(--card-h) * 2.6) - 64px);
-        padding: 8px;
+        height: calc(100vh - var(--menu-h) - (var(--card-h) * 2.4) - 36px);
+        padding: 6px;
     }
 }
