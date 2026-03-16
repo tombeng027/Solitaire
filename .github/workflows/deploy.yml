@@ -1,14 +1,13 @@
-name: Deploy to GitHub Pages
+name: Deploy Solitaire to GitHub Pages
 
 on:
   push:
-    branches: [main, master]
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -18,22 +17,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '14'
 
       - name: Install dependencies
-        working-directory: portfolio-site
-        run: npm ci
+        run: npm install --legacy-peer-deps
 
-      - name: Build
-        working-directory: portfolio-site
-        run: npm run build
+      - name: Build for production
+        run: npx @angular/cli@6 build --prod --base-href "/Solitaire/"
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./portfolio-site/dist
-          publish_branch: gh-pages
+          publish_dir: ./dist/Solitaire
