@@ -1,230 +1,105 @@
-/*foundation div*/
-#foundation{
+:host {
+    --card-w: clamp(46px, 7.2vw, 86px);
+    --card-h: calc(var(--card-w) * 1.25);
+}
 
-    background-color: aqua;
+#stowas,
+#foundation,
+#maneuver {
+    width: min(94vw, 1160px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#stowas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-top: clamp(74px, 11vh, 108px);
+}
+
+#deck,
+#waste,
+#foundation,
+#maneuver {
     box-shadow: 5px 5px black;
-    float: left; 
-    padding: 2%;
-    margin-top: 5%;
-    margin-left: 17%;
-    height: auto;
-    width: auto;    
-
 }
 
-#foundation img{
-
-    float: left;
-    width: 80px;
-    height: 100px;
-
+#deck,
+#waste {
+    padding: 10px;
 }
 
-/*stock and waste div*/
-
-#stowas div{
-
-    margin-top: 5%;
-    float: left;
-    padding: 2%;
-
-}
-
-#deck, #waste{
-
-    padding: 1%;
-    height: auto;
-
-}
-
-#deck{
-
-    width: auto;
-    margin-left: 10%;
-    margin-right: 5%;
+#deck {
     background-color: firebrick;
-    box-shadow: 5px 5px black;
-
 }
 
-#waste{
-    width: 14%;
+#waste {
     background-color: lightcoral;
-    box-shadow: 5px 5px black;
+    min-width: calc(var(--card-w) * 2.1);
 }
 
-#deck img, #waste img{
-
-    width: 80px;
-    height: 100px;
-
+#deck img,
+#waste img,
+#foundation img,
+.card {
+    width: var(--card-w);
+    height: var(--card-h);
 }
 
-#waste img{
-
-    float: left;
-    margin-right: -20%;
-
+#waste img {
+    margin-right: calc(var(--card-w) * -0.28);
 }
 
-/*maneuver div div*/
-#maneuver{
+#foundation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 12px;
+    background-color: aqua;
+}
 
+#maneuver {
+    margin-top: 12px;
+    padding: 12px;
     background-color: darkseagreen;
-    box-shadow: 5px 5px black;
-    display: inline-block;
-    text-align: center;
-    margin-top: 1%;
-    margin-left: 10%;
-    width: 80%;
-    height: 360px;
-
+    overflow-x: auto;
 }
 
-.card{
+.row {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(var(--card-w), 1fr));
+    gap: 10px;
+    min-width: calc(var(--card-w) * 7 + 60px);
+}
 
-    display:block;
+.column {
+    min-height: calc(var(--card-h) * 3.7);
+}
+
+.card {
+    display: block;
     position: relative;
-    margin-bottom: -80px;
-    margin-left: 10%;
-    width: 80px;
-    height: 100px;
-
+    margin-bottom: calc(var(--card-h) * -0.56);
 }
 
-.row{
-    margin-top: 1%;
-    margin-left:3%;
-}
-
-.column{
-    align-content: center;
-    float: left;
-    margin-left:1%;
-    width: 100px;
-    height: 260px;
-    padding: 1% 2% 1% 1%;
-}
-
-/*for responsive*/
-@media only screen and (max-width: 440px) {
-
-    #stowas div{
-        margin-top: 18%;
-    }
-    #deck img, #waste img{
-        width: 60px;
-        height: 80px;   
-    }
-    #deck, #waste{
-        height: 80px;
-    }
-    #waste img{
-        margin-right: -60%;
-    }
-    #waste{
-        width: 24%;
+@media only screen and (max-width: 700px) {
+    #stowas {
+        gap: 10px;
     }
 
-    #foundation img{
-        width: 60px;
-        height: 80px;
-    }
-    #foundation{
-        margin-left: 10%;
-        margin-top: 2%;
+    #deck,
+    #waste,
+    #foundation,
+    #maneuver {
+        box-shadow: 3px 3px black;
     }
 
-    #maneuver{
-        height: 280px + 5%;
-    }
-
-    .card{
-        width: 25px;
-        height: 60px;
-        margin-bottom: -45px;
-    }
-    .column{
-        width:25px;
-
-    }
-
-}
-@media only screen and (max-width: 1300px) and (min-width: 450px) {
-    #stowas div{
-        margin-top: 10%;
-    }
-    #deck img, #waste img{
-        width: 40px;
-        height: 60px;   
-    }
-    #deck, #waste{
-        height: 60px;
-    }
-    #waste img{
-        margin-right: -20%;
-    }
-    #waste{
-        width: 15%;
-    }
-    #foundation img{  
-        width: 40px;
-        height: 60px;
-    }
-    #foundation{
-        margin-top: 10%;
-        margin-left: 10%;
-    }
-    #maneuver{
-        height: 180px;
-    }
-    .card{
-        width: 40px;
-        height: 60px;
-        margin-bottom: -50px;
-    }
-    .column{
-        width:40px;
-        margin-left: 2%;
-    }
-}
-@media only screen and (max-width: 320px) {
-    #stowas div{
-        margin-top: 20%;
-    }
-    #deck img, #waste img{
-        width: 40px;
-        height: 60px;   
-    }
-    #deck, #waste{
-        height: 60px;
-    }
-    #waste img{
-        margin-right: -40%;
-    }
-    #waste{
-        width: 23%;
-    }
-    #foundation img{
-        width: 60px;
-        height: 80px;
-    }
-    #foundation{
-        margin-left: 10%;
-        margin-top: 2%;
-    }
-    #maneuver{
-        height: 280px;
-        margin-top: 2%;
-    }
-
-    .card{
-        width: 25px;
-        height: 60px;
-        margin-bottom: -45px;
-    }
-    .column{
-        width:25px;
-
+    .row {
+        gap: 8px;
     }
 }
