@@ -4,9 +4,9 @@
       <img src="{{getImgSrc(deck,0)}}">
     </div>
     <div id='waste'>
-      <img src="{{getImgSrc(waste)}}" >  
+      <img src="{{getImgSrc(waste,2)}}" >  
       <img src="{{getImgSrc(waste,1)}}" >
-      <img src="{{getImgSrc(waste,0)}}" (drag)="manserv.getRun(0,card,1)">
+      <img src="{{getImgSrc(waste,0)}}" (drag)="startWasteDrag()">
     </div>
 </div>
 
@@ -22,7 +22,7 @@
 <div id='maneuver'>
     <div class='row'>
         <div class= 'column' *ngFor="let pile of maneuver; let i = index" (dragover)="manserv.allowDrop($event)" (drop)="manserv.moveToPile($event,i)" >
-            <img class="card" *ngFor="let card of pile" src="{{card.getImgSrc()}}"  (drag)="manserv.getRun(i,card)">
+      <img class="card" *ngFor="let card of pile" src="{{card.getImgSrc()}}"  (drag)="manserv.getRun(i,card,0)">
         </div>
     </div>
 </div>

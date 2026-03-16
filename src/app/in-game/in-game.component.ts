@@ -24,8 +24,8 @@ export class InGameComponent implements OnInit {
   waste = wastepile;
 
   constructor(
-    private deckservice: DeckService, 
-    private manserv: Manserv,
+    public deckservice: DeckService,
+    public manserv: Manserv,
   ){}
   
   ngOnInit(){
@@ -57,6 +57,14 @@ export class InGameComponent implements OnInit {
           return this.empty;;
         }
         return foundation[int][foundation[int].length-1].imgsrc;
+  }
+
+  startWasteDrag(): void {
+    if(this.waste.length == 0){
+      return;
+    }
+
+    this.manserv.getRun(0, this.waste[this.waste.length-1], 1);
   }
 
   
