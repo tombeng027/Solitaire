@@ -2,37 +2,49 @@
 #menu{
     z-index: 1;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--menu-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 14px;
     background-color: darkgray;
     border: 2px outset black;
     box-shadow: 5px 5px black;
-    width: 98%;
-}  
+}
 
-#message{
-    position:fixed;
-    float:right;
-    margin-top: -35px;
-    margin-left: 70%;
+#title{
+    margin: 0;
+    flex: 1 1 auto;
+    text-align: left;
+    font-size: clamp(0.95rem, 2.1vw, 1.25rem);
+}
+
+#message,
+#scoreboard{
+    position: static;
+    margin: 0;
+    white-space: nowrap;
+    font-size: clamp(0.72rem, 1.6vw, 0.9rem);
 }
 
 #scoreboard{
-    position: fixed;
-    margin-top: -35px;
-    margin-left: 20%;
+    min-width: 120px;
+    text-align: right;
 }
-.menubutton{
 
+.menubutton{
     border-radius: 50px;
     border: 3px solid green;
-    position: fixed;
-    float: left;
     background-color: rgb(18, 207, 81);
-    padding: 1px;
-    margin-top: -40px;
-    margin-left: 5%;
+    padding: 4px 10px;
     width: auto;
     height: auto;
-
+    white-space: nowrap;
+    font-size: clamp(0.72rem, 1.6vw, 0.9rem);
 }
 
 .menubutton:hover{
@@ -45,11 +57,13 @@
 }
 
 .welcome{
-    margin-top: 3%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: -1;
+    object-fit: cover;
 }
 
 /* Modal for congratulating winner*/
@@ -86,4 +100,23 @@
 
 .modal-content img{
     margin-left: 37%;
+}
+
+@media only screen and (max-width: 860px) {
+    #menu {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: var(--menu-h);
+        padding: 8px 10px;
+    }
+
+    #title {
+        width: 100%;
+    }
+
+    #message,
+    #scoreboard {
+        flex: 1 1 auto;
+        text-align: left;
+    }
 }
